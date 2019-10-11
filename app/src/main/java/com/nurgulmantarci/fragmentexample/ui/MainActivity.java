@@ -31,18 +31,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BodyPartFragment headFragment=new BodyPartFragment();
-        headFragment.setImageıds(ImageAssets.getHeads());
-        headFragment.setmListIndex(0);
-        FragmentManager fragmentManager=getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .add(R.id.head_container,headFragment)
-                .commit();
+        if(savedInstanceState==null){
+            BodyPartFragment headFragment=new BodyPartFragment();
+            headFragment.setImageıds(ImageAssets.getHeads());
+            headFragment.setmListIndex(0);
+            FragmentManager fragmentManager=getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .add(R.id.head_container,headFragment)
+                    .commit();
 
-//        BodyPartFragment bodyFragment=new BodyPartFragment();
-//        fragmentManager.beginTransaction()
-//                .add(R.id.body_container,bodyFragment)
-//                .commit();
+            BodyPartFragment bodyFragment=new BodyPartFragment();
+            bodyFragment.setImageıds(ImageAssets.getBodies());;
+            fragmentManager.beginTransaction()
+                    .add(R.id.body_container,bodyFragment)
+                    .commit();
+
+            BodyPartFragment legFragment=new BodyPartFragment();
+            legFragment.setImageıds(ImageAssets.getLegs());
+            fragmentManager.beginTransaction()
+                    .add(R.id.leg_container,legFragment)
+                    .commit();
+        }
 
     }
 }
