@@ -39,6 +39,14 @@
 
        </FrameLayout>
 
+        <FrameLayout
+            android:id="@+id/body_container"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerInside">
+
+        </FrameLayout>
+
     </LinearLayout>
 
 </ScrollView>

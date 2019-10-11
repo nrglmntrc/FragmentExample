@@ -22,6 +22,7 @@ import androidx.fragment.app.FragmentManager;
 import android.os.Bundle;
 
 import com.nurgulmantarci.fragmentexample.R;
+import com.nurgulmantarci.fragmentexample.data.ImageAssets;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,11 +32,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         BodyPartFragment headFragment=new BodyPartFragment();
+        headFragment.setImageıds(ImageAssets.getHeads());
+        headFragment.setmListIndex(0);
         FragmentManager fragmentManager=getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .add(R.id.head_container,headFragment)
                 .commit();
 
+//        BodyPartFragment bodyFragment=new BodyPartFragment();
+//        fragmentManager.beginTransaction()
+//                .add(R.id.body_container,bodyFragment)
+//                .commit();
 
     }
 }
