@@ -57,4 +57,28 @@ public class ImageAssets {
             add(R.drawable.legs12);
         }
     };
+
+    private static final List<Integer> all = new ArrayList<Integer>(){
+        {
+            addAll(heads);
+            addAll(bodies);
+            addAll(legs);
+        }
+    };
+
+    public static List<Integer> getHeads(){
+        return heads;
+    }
+
+    public static List<Integer> getBodies(){
+        return bodies;
+    }
+
+    public static List<Integer> getLegs(){
+        return legs;
+    }
+
+    public static List<Integer> getAll(){
+        return all;
+    }
 }

@@ -1,8 +1,10 @@
-package com.nurgulmantarci.fragmentexample;
+package com.nurgulmantarci.fragmentexample.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.nurgulmantarci.fragmentexample.R;
 
 public class MainActivity extends AppCompatActivity {
 
