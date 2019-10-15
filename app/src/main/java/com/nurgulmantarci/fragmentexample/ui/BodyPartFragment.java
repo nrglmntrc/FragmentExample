@@ -29,6 +29,7 @@ public class BodyPartFragment extends Fragment {
 
     public BodyPartFragment() {
     }
+    //tıkladıgın yer neresi
 
     @Nullable
     @Override
